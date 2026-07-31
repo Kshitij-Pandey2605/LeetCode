@@ -1,0 +1,56 @@
+// Last updated: 7/31/2026, 9:24:52 PM
+class Solution {
+public:
+
+    int firstpos(vector<int>&nums,int target){
+        int low = 0 ;
+        int high = nums.size()-1;
+        int ans = -1;
+
+        while( low<=high){
+            int mid = low + (high-low)/2;
+
+            if(nums[mid]==target){
+                ans=mid;
+                high = mid-1;
+            }
+            else if (nums[mid]<target){
+                low = mid+1;
+            }
+            else{
+                high = mid -1;
+            }
+        }
+        return ans;
+    }
+
+
+     int lastpos(vector<int>&nums,int target){
+        int low = 0 ;
+        int high = nums.size()-1;
+        int ans = -1;
+
+        while( low<=high){
+            int mid = low + (high-low)/2;
+
+            if(nums[mid]==target){
+                ans=mid;
+                low = mid+1;
+            }
+            else if (nums[mid]<target){
+                low = mid+1;
+            }
+            else{
+                high = mid -1;
+            }
+        }
+        return ans;
+    }
+
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int first=firstpos(nums,target);
+        int last=lastpos(nums,target);
+
+        return {first,last};
+    }
+};
