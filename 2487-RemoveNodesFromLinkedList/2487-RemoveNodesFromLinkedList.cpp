@@ -1,4 +1,4 @@
-// Last updated: 8/12/2026, 2:24:59 PM
+// Last updated: 8/13/2026, 9:38:23 AM
 1/**
 2 * Definition for singly-linked list.
 3 * struct ListNode {
@@ -11,28 +11,45 @@
 10 */
 11class Solution {
 12public:
-13    ListNode* removeNodes(ListNode* head) {
-14
-15        vector<ListNode*> st;
-16
-17        ListNode* curr = head;
-18
-19        while (curr != nullptr) {
+13
+14    ListNode* reverseList(ListNode* head) {
+15        ListNode* prev = nullptr;
+16        ListNode* curr = head;
+17
+18        while (curr != nullptr) {
+19            ListNode* next = curr->next;
 20
-21            while (!st.empty() && st.back()->val < curr->val) {
-22                st.pop_back();
-23            }
-24
-25            st.push_back(curr);
-26            curr = curr->next;
-27        }
+21            curr->next = prev;
+22            prev = curr;
+23            curr = next;
+24        }
+25
+26        return prev;
+27    }
 28
-29        for (int i = 0; i < st.size() - 1; i++) {
-30            st[i]->next = st[i + 1];
-31        }
-32
-33        st.back()->next = nullptr;
-34
-35        return st[0];
-36    }
-37};
+29    ListNode* removeNodes(ListNode* head) {
+30
+31        // 1. Reverse the list
+32        head = reverseList(head);
+33
+34        // 2. Remove smaller nodes
+35        ListNode* curr = head;
+36        int maximum = head->val;
+37
+38        while (curr != nullptr && curr->next != nullptr) {
+39
+40            if (curr->next->val < maximum) {
+41                curr->next = curr->next->next;
+42            }
+43            else {
+44                curr = curr->next;
+45                maximum = curr->val;
+46            }
+47        }
+48
+49        // 3. Reverse again
+50        head = reverseList(head);
+51
+52        return head;
+53    }
+54};
