@@ -11,4 +11,16 @@
 | [0610-triangle-judgement](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/0610-triangle-judgement) |
 | [0619-biggest-single-number](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/0619-biggest-single-number) |
 | [1068-product-sales-analysis-i](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/1068-product-sales-analysis-i) |
+## String
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/0020-valid-parentheses) |
+## Stack
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/0020-valid-parentheses) |
+## Bracket Sequences
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->
