@@ -11,6 +11,7 @@
 | [0610-triangle-judgement](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/0610-triangle-judgement) |
 | [0619-biggest-single-number](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/0619-biggest-single-number) |
 | [1068-product-sales-analysis-i](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/1068-product-sales-analysis-i) |
+| [1179-reformat-department-table](https://github.com/Kshitij-Pandey2605/LeetCode/tree/master/1179-reformat-department-table) |
 ## String
 |  |
 | ------- |
